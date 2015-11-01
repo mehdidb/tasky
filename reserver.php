@@ -14,7 +14,7 @@
 	// Connection BDD à MODIFIER !!!!!
 	try
 	{
-		$db = new PDO('mysql:host=localhost;dbname=laposte;charset=utf8', 'root', '');
+		$db = new PDO('mysql:host=br-cdbr-azure-south-a.cloudapp.net;dbname=laposte;charset=utf8', 'ba01ebbeda3449', '0db11376');
 	}
 	catch(Exception $e)
 	{
