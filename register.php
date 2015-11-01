@@ -27,7 +27,7 @@
 	
 	$_SESSION['ticketiD'] = $donneesT['LAST(idF)'];
 	
-	echo "Ticket : " + $_SESSION['nom'] + "_" + $_SESSION['prenom'] + "_" + $_SESSION['ticketiD'];
+	echo "Ticket : " + $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_" . $_SESSION['ticketiD'];
 	
 	header('Refresh: 3; url=index.html');
 ?>
