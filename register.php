@@ -13,7 +13,7 @@
 	}
 	
 	$req = $db->prepare("INSERT INTO file(idC, idG, idP, temps_entre, temps_sortie, actif) VALUES(:idc, :idg, :idp, :temp_entre, :temps_sortie, 1)");
-	$req->exec(array(
+	$req->execute(array(
 	'idc' => $_SESSION['idC'],
 	'idg' => $_SESSION['idG'],
 	'idp' => $_SESSION['idP'],
@@ -25,7 +25,7 @@
 	//$reqT->execute(array($_SESSION['idC']));
 	//$donneesT = $reqT->fetch();
 	
-	$_SESSION['ticketiD'] = $req->lastInsertId();
+	$_SESSION['ticketiD'] = $db->lastInsertId();
 	echo $_SESSION['ticketiD'];
 	echo "Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_";
 	
