@@ -31,7 +31,7 @@
 	$_SESSION['idG'] = $_GET['guichet'];
 	$_SESSION['idp'] = $donneesG['idP'];
 	
-	echo $_SESSION['idp'];
+	//echo $_SESSION['idp'];
 	
 	function gensAvant()
 	{
