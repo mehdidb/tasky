@@ -29,13 +29,8 @@
 	$donneesG = $reqG->fetch();
 	
 	$_SESSION['idG'] = $_GET['guichet'];
-	$_SESSION['idp'] = $donneesG['idP'];
-	
-	//echo $_SESSION['idp'];
-	$reqA = $db->prepare('SELECT count(*) FROM file WHERE actif=1 AND idG=? AND idP=?');
-		$reqA->execute(array($_SESSION['idG'], $_SESSION['idP']));
-		$donneesA = $reqA->fetch();
-		echo $donneesA['count(*)'];
+	$_SESSION['idP'] = $donneesG['idP'];
+
 	function gensAvant()
 	{
 		global $db;
@@ -56,7 +51,7 @@
         <h2 style="color:red;">Réserver une place</h2>
 		
 		<h3 style="color:blue;">Nom : <span><?php echo $_SESSION['nom'];?></span></h3>
-		<h3 style="color:blue;">prenom : <span><?php echo $_SESSION['prenom'];?></span></h3>
+		<h3 style="color:blue;">Prenom : <span><?php echo $_SESSION['prenom'];?></span></h3>
 		<h3 style="color:blue;">Nombre de gens avant : <span><?php echo gensAvant();?></span></h3>
         	<h3 style="color:blue;">Temps d'attente estimé : <span><?php echo tempRest();?></span> minutes</h3>
 		<p>
