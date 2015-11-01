@@ -6,6 +6,7 @@
     </head>
 <?php
 	session_start();
+	$_SESSION['idC'] = 14;
 	if (!(isset($_GET['guichet']) AND isset($_GET['region'])))
 	{
 		header('Location: erreur.html');
