@@ -26,7 +26,7 @@
 	$donneesT = $reqT->fetch();
 	
 	$_SESSION['ticketiD'] = $donneesT['LAST(idF)'];
-
+	echo $_SESSION['ticketiD'];
 	echo "Ticket : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_";
 	
 	header('Refresh: 3; url=index.html');
