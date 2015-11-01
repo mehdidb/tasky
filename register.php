@@ -13,7 +13,7 @@
 	}
 	
 	$req = $db->prepare("INSERT INTO file(idC, idG, idP, temps_entre, temps_sortie, actif) VALUES(:idc, :idg, :idp, :temp_entre, :temps_sortie, 1)");
-	$req->execute(array(
+	$req->exec(array(
 	'idc' => $_SESSION['idC'],
 	'idg' => $_SESSION['idG'],
 	'idp' => $_SESSION['idP'],
