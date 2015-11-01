@@ -26,8 +26,7 @@
 	//$donneesT = $reqT->fetch();
 	
 	$_SESSION['ticketiD'] = $db->lastInsertId();
-	echo $_SESSION['ticketiD'];
-	echo "Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_";
+	echo "Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_" . $_SESSION['ticketiD'];
 	
 	//header('Refresh: 3; url=index.html');
 ?>
