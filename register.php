@@ -21,7 +21,7 @@
 	'temps_sortie' => date("Y-m-d")
 	));
 
-	$reqT = $db->prepare('SELECT idF FROM file WHERE idC=?');
+	$reqT = $db->prepare('SELECT LAST(idF) FROM file WHERE idC=?');
 	$reqT->execute(array($_SESSION['idC']));
 	$donneesT = $reqT->fetch();
 	
