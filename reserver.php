@@ -6,9 +6,13 @@
     </head>
 <?php
 	session_start();
-	$_SESSION['idC'] = 14;
-	$_SESSION['nom'] = "foulen";
-	$_SESSION['prenom'] = "ben foulen";
+	if (!isset($_SESSION['idC']))
+	{
+	    $_SESSION['idC'] = rand(1, 100);
+		$_SESSION['nom'] = "foulen";
+		$_SESSION['prenom'] = "ben foulen";
+	}
+	
 	if (!(isset($_GET['guichet']) AND isset($_GET['region'])))
 	{
 		header('Location: erreur.html');
