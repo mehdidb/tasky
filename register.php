@@ -24,9 +24,8 @@
 	//$reqT = $db->prepare('SELECT LAST(idF) FROM file WHERE idC=?');
 	//$reqT->execute(array($_SESSION['idC']));
 	//$donneesT = $reqT->fetch();
-	$last_id = $req->insert_id;
 	
-	$_SESSION['ticketiD'] = $last_id;
+	$_SESSION['ticketiD'] = $req->lastInsertId();
 	echo $_SESSION['ticketiD'];
 	echo "Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_";
 	
