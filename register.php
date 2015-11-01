@@ -11,7 +11,7 @@
 	{
 		die('Erreur : '.$e->getMessage());
 	}
-	
+	/*
 	$req = $db->prepare("INSERT INTO file(idC, idG, idP, temps_entre, temps_sortie, actif) VALUES(:idc, :idg, :idp, :temp_entre, :temps_sortie, 1)");
 	$req->execute(array(
 	'idc' => $_SESSION['idC'],
@@ -20,7 +20,7 @@
 	'temp_entre' => date("Y-m-d"),
 	'temps_sortie' => date("Y-m-d")
 	));
-
+*/
 	$reqT = $db->prepare('SELECT LAST(idF) FROM file WHERE idC=?');
 	$reqT->execute(array($_SESSION['idC']));
 	$donneesT = $reqT->fetch();
@@ -29,5 +29,5 @@
 	echo $_SESSION['ticketiD'];
 	echo "Ticket : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_";
 	
-	header('Refresh: 3; url=index.html');
+	//header('Refresh: 3; url=index.html');
 ?>
