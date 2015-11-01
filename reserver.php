@@ -55,8 +55,10 @@
     <body>
         <h2 style="color:red;">Réserver une place</h2>
 		
+		<h3 style="color:blue;">Nom : <span><?php echo $_SESSION['nom'];?></span></h3>
+		<h3 style="color:blue;">prenom : <span><?php echo $_SESSION['prenom'];?></span></h3>
 		<h3 style="color:blue;">Nombre de gens avant : <span><?php echo gensAvant();?></span></h3>
-        <h3 style="color:blue;">Temps d'attente estimé : <span><?php echo tempRest();?></span> minutes</h3>
+        	<h3 style="color:blue;">Temps d'attente estimé : <span><?php echo tempRest();?></span> minutes</h3>
 		<p>
 			<form action="register.php" method="post">
 				<input type="submit" name="button" value="Prendre un ticket" />
