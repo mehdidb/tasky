@@ -55,7 +55,7 @@
 		<h3 style="color:blue;">Nombre de gens avant : <span><?php echo gensAvant();?></span></h3>
         	<h3 style="color:blue;">Temps d'attente estimé : <span><?php echo tempRest();?></span> minutes</h3>
 		<?php
-if (isset($_SESSION['ticket']))
+if (isset($_SESSION['ticketiD']))
 {
     echo "<h3 style=\"color:blue;\"> Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_" . $_SESSION['ticketiD'] . "</h3>";
 }
