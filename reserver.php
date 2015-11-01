@@ -54,10 +54,19 @@
 		<h3 style="color:blue;">Prenom : <span><?php echo $_SESSION['prenom'];?></span></h3>
 		<h3 style="color:blue;">Nombre de gens avant : <span><?php echo gensAvant();?></span></h3>
         	<h3 style="color:blue;">Temps d'attente estimé : <span><?php echo tempRest();?></span> minutes</h3>
-		<p>
+		<?php
+if (isset($_SESSION['ticket']))
+{
+    echo "<h3 style=\"color:blue;\"> Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_" . $_SESSION['ticketiD'] . "</h3>";
+}
+else
+{
+	echo '<p>
 			<form action="register.php" method="post">
 				<input type="submit" name="button" value="Prendre un ticket" />
 			</form>
-		</p>
+		</p>';
+}
+?>
     </body>
 </html>
