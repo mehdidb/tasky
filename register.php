@@ -20,8 +20,14 @@
 	'temp_entre' => date("Y-m-d"),
 	'temps_sortie' => date("Y-m-d")
 	));
-
-echo 	date("Y-m-d");
 	
-	//header('Location: index.html');
+	$reqT = $db->prepare('SELECT LAST(idF) FROM file WHERE idC=?');
+	$reqT->execute(array($_SESSION['idC']));
+	$donneesT = $reqT->fetch();
+	
+	$_SESSION['ticketiD'] = $donneesT['LAST(idF)'];
+	
+	echo "Ticket : " + $_SESSION['nom'] + "_" + $_SESSION['prenom'] + "_" + 
+	
+	header('Refresh: 3; url=index.html');
 ?>
