@@ -28,5 +28,5 @@
 	$_SESSION['ticketiD'] = $db->lastInsertId();
 	echo "Ticket info : " . $_SESSION['nom'] . "_" . $_SESSION['prenom'] . "_" . $_SESSION['ticketiD'];
 	
-	//header('Refresh: 3; url=index.html');
+	header('Refresh: 3; url=index.html');
 ?>
