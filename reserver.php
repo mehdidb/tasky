@@ -32,7 +32,10 @@
 	$_SESSION['idp'] = $donneesG['idP'];
 	
 	//echo $_SESSION['idp'];
-	
+	$reqA = $db->prepare('SELECT count(*) FROM file WHERE actif=1 AND idG=? AND idP=?');
+		$reqA->execute(array($_SESSION['idG'], $_SESSION['idP']));
+		$donneesA = $reqA->fetch();
+		echo $donneesA['count(*)'];
 	function gensAvant()
 	{
 		global $db;
